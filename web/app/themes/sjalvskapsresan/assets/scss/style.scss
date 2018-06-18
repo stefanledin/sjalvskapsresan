@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'timeline';
+@import 'sidebar';
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: $orange;
+}
+
+.site-wrapper {
+    display: flex;
+    min-height: 100%;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 64px;
+    color: white;
+}
+.main {
+    margin-left: 120px;
+}
+.post-wrapper { }
+.post {
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+/**
+ *
+ * Helpers
+ *
+ */
+
+.flex {
+    display: flex;
+}

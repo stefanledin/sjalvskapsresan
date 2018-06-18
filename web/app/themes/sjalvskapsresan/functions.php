@@ -5,6 +5,8 @@
 require_once($root_dir . '/vendor/autoload.php');
 $timber = new \Timber\Timber();
 
+$timber::$dirname = array('templates', 'views');
+
 /**
  * Content
  *

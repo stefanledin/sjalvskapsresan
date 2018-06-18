@@ -47,6 +47,45 @@
 		"oAP": "\/assets\/js\/.gitkeep",
 		"oF": 0
 		},
+	"\/assets\/scss\/_sidebar.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/_sidebar.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/scss\/_timeline.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/_timeline.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/scss\/_variables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/_variables.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/scss\/style.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -144,13 +183,6 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"\/index.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/index.twig",
-		"oF": 0
-		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -185,6 +217,27 @@
 		"oAP": "\/style-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"\/templates\/index.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/templates\/index.twig",
+		"oF": 0
+		},
+	"\/templates\/posts.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/templates\/posts.twig",
+		"oF": 0
+		},
+	"\/templates\/timeline.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/templates\/timeline.twig",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -200,7 +253,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -1591,7 +1644,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/sjalvskapsresan.test\/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

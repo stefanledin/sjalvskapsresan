@@ -1,0 +1,31 @@
+.timeline {
+    display: flex;
+    background: $blue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+.timeline__item {
+    padding: 0 40px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    &.timeline__item--header {
+        padding: 0 20px;
+        background: $lightblue;
+        color: $red;
+    }
+    &.timeline__item--day {
+        padding: 0 20px;
+        background: $darkblue;
+    }
+}
+.timeline__item__heading {
+    margin-bottom: 2px;
+    display: block;
+    font-size: 18px;
+}
