@@ -38,12 +38,45 @@
   max-width: 410px;
   background: #F2B872;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5); }
-  .sidebar ul {
-    margin: 0;
-    padding: 0; }
-  .sidebar span {
-    font-size: 36px;
-    color: #EE3F43; }
+
+.category-list {
+  margin: 0;
+  padding: 0; }
+
+.category-list__item {
+  list-style-type: none; }
+  .category-list__item a {
+    display: block; }
+  .category-list__item:hover, .category-list__item.category-list__item--active {
+    background: #f4c68e;
+    cursor: pointer; }
+
+.category-list__heading {
+  padding: 10px 0 10px 50px;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  color: #EE3F43; }
+
+.posts-list {
+  margin: 0;
+  padding: 0; }
+
+.posts-list__item {
+  list-style-type: none; }
+  .posts-list__item a {
+    padding: 15px 0 15px 100px;
+    display: block;
+    font-size: 24px;
+    color: #EE3F43;
+    text-decoration: none; }
+  .posts-list__item time {
+    font-size: 14px;
+    color: black;
+    display: block; }
+  .posts-list__item:hover, .posts-list__item.posts-list__item--active {
+    background: #f7d7b0; }
 
 html, body {
   height: 100%; }
