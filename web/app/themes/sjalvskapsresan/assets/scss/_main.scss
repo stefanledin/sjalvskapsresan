@@ -1,0 +1,74 @@
+.site-title {
+    margin: 0 0 80px 0;
+    font-size: 64px;
+    color: white;
+}
+
+.main {
+    margin: 30px 0 100px 120px;
+    max-width: 780px;
+    flex: 1;
+}
+
+.post-wrapper {
+    position: relative;
+}
+.post {
+    padding-bottom: 100px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    position: relative;
+    z-index: 2;
+    line-height: 1.2;
+
+    // Allt utom img
+    &>*:not(img) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 580px;
+    }
+}
+.post__title {
+    margin: 20px 0 0 0;
+    font-size: 48px;
+    color: $red;
+    line-height: 1;
+    small {
+        margin-bottom: 7px;
+        font-size: 24px;
+        display: block;
+        color: $brown;
+    }
+}
+
+.posts-pile {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    //opacity: .8;
+    //transition: all .3s;
+    animation: movePile 2s;
+    animation-delay: 1s;
+}
+@keyframes movePile {
+    0% {
+        transform: rotate(2deg) translate(0, 0);
+        z-index: 1;
+    }
+    50% {
+        transform: rotate(2deg) translate(200px, -20px);
+        z-index: 1;
+    }
+    51% {
+        z-index: 3;
+    }
+    100% {
+        z-index: 3;
+        transform: rotate(0deg) translate(0, 0);
+    }
+}

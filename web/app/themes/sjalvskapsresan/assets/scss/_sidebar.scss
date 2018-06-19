@@ -3,6 +3,16 @@
     max-width: 410px;
     background: $brown;
     box-shadow: 2px 0 4px rgba(0, 0, 0, .5);
+    position: relative;
+    flex: 1;
+}
+.sidebar__timeline {
+    width: 2px;
+    background: $red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
 }
 
 .category-list {
@@ -11,6 +21,8 @@
 }
 .category-list__item {
     list-style-type: none;
+    background: $brown;
+    transition: background .2s;
     a {
         display: block;
     }
@@ -24,7 +36,6 @@
     padding: 10px 0 10px 50px;
     font-size: 36px;
     font-weight: bold;
-    font-style: italic;
     text-decoration: none; 
     color: $red;
 }
@@ -35,12 +46,15 @@
 }
 .posts-list__item {
     list-style-type: none;
+    background-color: #f4c68e;
+    transition: background-color .2s;
     a {
-        padding: 15px 0 15px 100px;
+        padding: 15px 10px 15px 100px;
         display: block;
-        font-size: 24px;
+        font-size: 22px;
         color: $red;
         text-decoration: none;
+        //background: linear-gradient(90deg, #f7d7b0 0%, #f4c68e 100%);
     }
     time {
         font-size: 14px;
@@ -50,6 +64,9 @@
 
     &:hover,
     &.posts-list__item--active {
-        background: #f7d7b0;
+        background-color: #f7d7b0;
+        background-image: url('../img/needle.svg');
+        background-position: 10px center;
+        background-repeat: no-repeat;
     }
 }

@@ -33,6 +33,16 @@
 		"oAP": "\/assets\/img\/.gitkeep",
 		"oF": 0
 		},
+	"\/assets\/img\/needle.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/needle.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -46,6 +56,19 @@
 		"oA": 0,
 		"oAP": "\/assets\/js\/.gitkeep",
 		"oF": 0
+		},
+	"\/assets\/scss\/_main.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/_main.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/assets\/scss\/_sidebar.scss": {
 		"aP": 0,
