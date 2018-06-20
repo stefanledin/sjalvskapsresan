@@ -1,10 +1,25 @@
 .sidebar {
+    //display: none;
     width: 95%;
     max-width: 410px;
     background: $brown;
     box-shadow: 2px 0 4px rgba(0, 0, 0, .5);
     position: relative;
     flex: 1;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 6;
+    //transform: translateX(-100%);
+    @include tablet {
+        position: relative;
+        z-index: 3;
+    }
+}
+.sidebar__scrollable {
+    overflow-y: scroll;
+    height: 100%;
 }
 .sidebar__timeline {
     width: 2px;
@@ -34,10 +49,13 @@
 }
 .category-list__heading {
     padding: 10px 0 10px 50px;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: bold;
     text-decoration: none; 
     color: $red;
+    @include tablet {
+        font-size: 36px;
+    }
 }
 
 .posts-list {
@@ -49,17 +67,23 @@
     background-color: #f4c68e;
     transition: background-color .2s;
     a {
-        padding: 15px 10px 15px 100px;
+        padding: 15px 10px 15px 80px;
         display: block;
-        font-size: 22px;
+        font-size: 18px;
         color: $red;
         text-decoration: none;
-        //background: linear-gradient(90deg, #f7d7b0 0%, #f4c68e 100%);
+        @include tablet {
+            padding: 15px 10px 15px 100px;
+            font-size: 22px;
+        }
     }
     time {
-        font-size: 14px;
+        font-size: 12px;
         color: black;
         display: block;
+        @include tablet {
+            font-size: 14px;
+        }
     }
 
     &:hover,

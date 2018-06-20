@@ -9,3 +9,23 @@ $red: #EE3F43;
 $blue: #93B7BF;
 $lightblue: #DEE9EB;
 $darkblue: rgb(117, 146, 152);
+
+
+/**
+ *
+ * Media queries
+ *
+ */
+$tablet: 600px;
+$desktop: 1024px;
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content
+    }
+}
