@@ -1,24 +1,23 @@
 .sidebar {
-    //display: none;
-    width: 95%;
+    width: 90%;
     max-width: 410px;
     background: $brown;
     box-shadow: 2px 0 4px rgba(0, 0, 0, .5);
-    position: relative;
-    flex: 1;
-    position: fixed;
-    height: 100%;
+    //flex: 1;
+
+    position: absolute;
     top: 0;
     bottom: 0;
-    z-index: 6;
+    //display: none;
     //transform: translateX(-100%);
+    z-index: 3;
+
     @include tablet {
         position: relative;
-        z-index: 3;
     }
 }
 .sidebar__scrollable {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100%;
 }
 .sidebar__timeline {
