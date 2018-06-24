@@ -16,16 +16,6 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
-	"\/assets\/css\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/css\/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/assets\/img\/.gitkeep": {
 		"cB": 0,
 		"ft": 8192,
@@ -70,19 +60,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/scss\/_sidebar.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/_sidebar.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/assets\/scss\/_timeline.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -106,19 +83,6 @@
 		"oA": 1,
 		"oAP": "\/assets\/scss\/_variables.css",
 		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/assets\/scss\/style.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/css\/style.css",
-		"oF": 2,
 		"oS": 0,
 		"uL": 1
 		},

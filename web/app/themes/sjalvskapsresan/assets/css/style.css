@@ -155,9 +155,12 @@
     .sidebar {
       position: relative;
       transform: translateX(0); } }
+<<<<<<< HEAD
   @media (min-width: 1024px) {
     .sidebar {
       max-width: 410px; } }
+=======
+>>>>>>> 25c2dc14fa1d267d329d83c360a65780f16f9e92
 
 .sidebar__scrollable {
   overflow-y: auto;
@@ -254,11 +257,14 @@ body {
   right: 0;
   z-index: 2;
   display: none; }
+<<<<<<< HEAD
   .open-sidebar .overlay {
     display: block; }
   @media (min-width: 900px) {
     .overlay {
       display: none !important; } }
+=======
+>>>>>>> 25c2dc14fa1d267d329d83c360a65780f16f9e92
 
 /**
  *
