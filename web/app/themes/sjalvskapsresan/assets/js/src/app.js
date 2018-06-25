@@ -1,3 +1,13 @@
+import moment from 'moment';
+
+const departure = moment('2018-07-05 06:11');
+let time = document.querySelector('header.timeline__item time');
+setInterval(() => {
+    const diff = moment.duration(departure.diff(moment()))._data;
+    time.innerHTML = diff.days + '/' + diff.hours + ':' + diff.minutes + ':' + diff.seconds;
+}, 1000);
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
     import(/* webpackChunkName: "SidebarNav" */ './SidebarNav').then(SidebarNav => {
         new SidebarNav.default();
