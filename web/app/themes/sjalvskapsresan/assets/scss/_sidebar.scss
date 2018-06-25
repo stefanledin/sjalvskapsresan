@@ -61,10 +61,21 @@
         font-size: 36px;
     }
 }
+.category-list__item--active .category-list__heading:hover {
+    background: rgb(243, 191, 128);
+}
 
 .posts-list {
-    margin: 0;
+    margin-top: -100%;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
     padding: 0;
+    height: auto;
+    transition: margin-top 235ms cubic-bezier(.4,0,.2,1);
+    .category-list__item--active & {
+        margin-top: 0;
+    }
 }
 .posts-list__wrapper {
     overflow: hidden;

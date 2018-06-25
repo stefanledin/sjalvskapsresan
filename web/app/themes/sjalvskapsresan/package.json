@@ -1,0 +1,17 @@
+{
+  "name": "sjalvskapsresan",
+  "version": "1.0.0",
+  "description": "Bloggen för min Interrail-resa",
+  "main": "webpack.config.js",
+  "scripts": {
+    "watch": "webpack -w -d",
+    "prod": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
