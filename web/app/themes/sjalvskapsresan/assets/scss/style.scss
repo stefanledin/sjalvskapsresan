@@ -35,11 +35,37 @@ body {
     right: 0;
     z-index: 2;
     display: none;
-    .open-sidebar & {
+    .sidebar-is-open & {
         display: block;
     }
     @include tablet {
         display: none !important;
+    }
+}
+
+.js-open-sidebar {
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    width: 60px;
+    left: 0;
+    height: 50px;
+    z-index: 5;
+    background: $brown;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 235ms ease-in-out;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 0 5px 5px 0;
+    .sidebar-is-open & {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
     }
 }
 

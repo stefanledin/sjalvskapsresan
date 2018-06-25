@@ -139,9 +139,14 @@
     z-index: 3;
     transform: rotate(0deg) translate(0, 0); } }
 
+/**
+ *
+ * Sidebar
+ *
+ */
 .sidebar {
-  width: 90%;
-  max-width: 350px;
+  width: 85%;
+  max-width: 320px;
   background: #F2B872;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5);
   flex: 1;
@@ -149,8 +154,11 @@
   top: 0;
   bottom: 0;
   transform: translateX(-100%);
-  transition: transform 235ms ease-in-out;
+  transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 3; }
+  .sidebar-is-open .sidebar {
+    transform: translateX(0);
+    transition: transform 235ms ease-in-out; }
   @media (min-width: 900px) {
     .sidebar {
       position: relative;
@@ -171,6 +179,11 @@
   bottom: 0;
   left: 10px; }
 
+/**
+ *
+ * Kategorilista/städer
+ *
+ */
 .category-list {
   margin: 0;
   padding: 0; }
@@ -186,7 +199,7 @@
     cursor: pointer; }
 
 .category-list__heading {
-  padding: 10px 0 10px 30px;
+  padding: 10px 0 10px 20px;
   font-size: 26px;
   font-weight: bold;
   text-decoration: none;
@@ -198,6 +211,11 @@
 .category-list__item--active .category-list__heading:hover {
   background: #f3bf80; }
 
+/**
+ *
+ * Lista med bloggposter
+ *
+ */
 .posts-list {
   margin-top: -100%;
   margin-right: 0;
@@ -217,7 +235,7 @@
   background-color: #f4c68e;
   transition: background-color .2s; }
   .posts-list__item a {
-    padding: 15px 10px 15px 60px;
+    padding: 15px 10px 15px 55px;
     display: block;
     font-size: 18px;
     color: #EE3F43;
@@ -267,11 +285,34 @@ body {
   right: 0;
   z-index: 2;
   display: none; }
-  .open-sidebar .overlay {
+  .sidebar-is-open .overlay {
     display: block; }
   @media (min-width: 900px) {
     .overlay {
       display: none !important; } }
+
+.js-open-sidebar {
+  padding: 0;
+  position: fixed;
+  bottom: 20px;
+  width: 60px;
+  left: 0;
+  height: 50px;
+  z-index: 5;
+  background: #F2B872;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 235ms ease-in-out;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 0 5px 5px 0; }
+  .sidebar-is-open .js-open-sidebar {
+    display: none; }
+  @media (min-width: 900px) {
+    .js-open-sidebar {
+      display: none; } }
 
 /**
  *
