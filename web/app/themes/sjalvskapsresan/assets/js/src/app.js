@@ -13,7 +13,11 @@ document.querySelector('button.plask').addEventListener('click', event => {
 });
 document.querySelector('button.slask').addEventListener('click', event => {
     event.preventDefault();
-    document.querySelector('div.posts-pile--animateable').classList.remove('posts-pile--run-animation');
+    const pile = document.querySelector('div.posts-pile--animateable');
+    pile.classList.add('posts-pile--reset-animation');
+    setTimeout(() => {
+        pile.classList.remove('posts-pile--run-animation', 'posts-pile--reset-animation');
+    }, 1000);
 });
 
 
