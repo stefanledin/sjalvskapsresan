@@ -63,7 +63,8 @@
 
 .main {
   margin: 30px auto 100px auto;
-  width: 90%; }
+  width: 90%;
+  z-index: 1; }
   @media (min-width: 900px) {
     .main {
       flex: 1;
@@ -110,7 +111,6 @@
         font-size: 24px; } }
 
 .posts-pile {
-  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -120,19 +120,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   opacity: .8; }
   .posts-pile.posts-pile--animateable {
+    transition: opacity 1s ease-in-out; }
+  .posts-pile.posts-pile--run-animation {
+    animation: movePile 1s;
     z-index: 1;
-    animation: movePile .5s;
-    animation-delay: 2s;
     animation-fill-mode: forwards; }
 
 @keyframes movePile {
   0% {
     transform: rotate(2deg) translate(0, 0); }
-  50% {
+  70% {
     transform: rotate(2deg) translate(200px, -20px);
     opacity: .8;
     z-index: 1; }
-  51% {
+  71% {
     z-index: 3; }
   100% {
     opacity: 1;
@@ -274,7 +275,8 @@ body {
 .site-wrapper {
   display: flex;
   min-height: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .overlay {
   background: rgba(0, 0, 0, 0.5);

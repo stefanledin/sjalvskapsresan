@@ -7,7 +7,6 @@
 <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-        <!--<meta name="viewport" content="initial-scale=1, maximum-scale=1">-->
         <meta name="viewport" content="width=device-width">
         {{function('wp_head')}}
 	</head>
@@ -19,6 +18,8 @@
             {% include 'sidebar.twig' %}
 
             <section class="main">
+                <button class="plask">Kör</button>
+                <button class="slask">Reset</button>
                 <h1 class="site-title">Självskapsresan</h1>
                 <div class="post-wrapper">
                     <article class="post">
@@ -29,8 +30,7 @@
                         <img src="http://via.placeholder.com/780x522">
                         <p>Cras varius id arcu ac porttitor. Maecenas ultrices, ligula a dapibus dictum, lectus dui fringilla eros, quis euismod risus eros ut urna. Morbi eu lacus nisi. Pellentesque augue nibh, posuere eget eros sed, pulvinar placerat erat. Cras nulla enim, luctus sit amet est varius, dignissim porta elit. Ut vitae lacinia enim. Sed fermentum, metus finibus volutpat elementum, neque enim laoreet turpis, porta vestibulum lacus lacus non diam. Nunc vel metus in nibh efficitur pharetra ut vitae lorem. Suspendisse auctor lorem dolor, sit amet accumsan nisi elementum eu.</p>
                     </article>
-                    <!--<div class="posts-pile posts-pile--animateable" style="transform: rotate(2deg)"></div>-->
-                    <div class="posts-pile" style="transform: rotate(2deg)"></div>
+                    <div class="posts-pile posts-pile--animateable" style="transform: rotate(2deg)"></div>
                     <div class="posts-pile" style="transform: rotate(-2deg)"></div>
                 </div>
             </section>

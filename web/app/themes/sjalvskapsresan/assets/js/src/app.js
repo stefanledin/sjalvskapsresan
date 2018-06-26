@@ -7,6 +7,15 @@ setInterval(() => {
     time.innerHTML = diff.days + '/' + diff.hours + ':' + diff.minutes + ':' + diff.seconds;
 }, 1000);
 
+document.querySelector('button.plask').addEventListener('click', event => {
+    event.preventDefault();
+    document.querySelector('div.posts-pile--animateable').classList.add('posts-pile--run-animation');
+});
+document.querySelector('button.slask').addEventListener('click', event => {
+    event.preventDefault();
+    document.querySelector('div.posts-pile--animateable').classList.remove('posts-pile--run-animation');
+});
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
     import(/* webpackChunkName: "SidebarNav" */ './SidebarNav').then(SidebarNav => {
