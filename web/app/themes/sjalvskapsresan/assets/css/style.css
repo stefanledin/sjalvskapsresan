@@ -123,8 +123,12 @@
     transition: opacity 1s ease-in-out; }
   .posts-pile.posts-pile--run-animation {
     animation: movePile 1s;
+    animation-delay: 235ms;
     z-index: 1;
     animation-fill-mode: forwards; }
+    @media (min-width: 900px) {
+      .posts-pile.posts-pile--run-animation {
+        animation-delay: 0; } }
   .posts-pile.posts-pile--reset-animation {
     animation: resetPile 1s;
     animation-fill-mode: forwards; }
@@ -312,9 +316,10 @@ body {
       display: none !important; } }
 
 .js-open-sidebar {
+  margin-bottom: -25px;
   padding: 0;
   position: fixed;
-  bottom: 20px;
+  bottom: 50%;
   width: 60px;
   left: 0;
   height: 50px;

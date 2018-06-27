@@ -81,8 +81,12 @@
     }
     &.posts-pile--run-animation {
         animation: movePile 1s;
+        animation-delay: 235ms;
         z-index: 1;
         animation-fill-mode: forwards;
+        @include tablet {
+            animation-delay: 0;
+        }
     }
     &.posts-pile--reset-animation {
         animation: resetPile 1s;

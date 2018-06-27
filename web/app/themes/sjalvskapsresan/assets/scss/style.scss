@@ -45,9 +45,10 @@ body {
 }
 
 .js-open-sidebar {
+    margin-bottom: -25px;
     padding: 0;
     position: fixed;
-    bottom: 20px;
+    bottom: 50%;
     width: 60px;
     left: 0;
     height: 50px;
@@ -68,6 +69,7 @@ body {
     @include tablet {
         display: none;
     }
+    //@media (min-height: )
 }
 
 /**
