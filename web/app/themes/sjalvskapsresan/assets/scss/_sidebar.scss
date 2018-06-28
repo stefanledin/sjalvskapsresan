@@ -27,7 +27,7 @@
         transform: translateX(0);
     }
     @include desktop {
-        max-width: 410px;
+        //max-width: 410px;
     }
 }
 .sidebar__scrollable {
@@ -73,7 +73,7 @@
     text-decoration: none; 
     color: $red;
     @include desktop {
-        font-size: 36px;
+        //font-size: 36px;
     }
 }
 .category-list__item--active .category-list__heading:hover {
@@ -111,17 +111,19 @@
         font-size: 18px;
         color: $red;
         text-decoration: none;
+        /*
         @include desktop {
             padding: 15px 10px 15px 100px;
             font-size: 22px;
         }
+        */
     }
     time {
         font-size: 12px;
         color: black;
         display: block;
         @include desktop {
-            font-size: 14px;
+            //font-size: 14px;
         }
     }
 

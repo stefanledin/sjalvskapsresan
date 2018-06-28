@@ -186,9 +186,6 @@
     .sidebar {
       position: relative;
       transform: translateX(0); } }
-  @media (min-width: 1024px) {
-    .sidebar {
-      max-width: 410px; } }
 
 .sidebar__scrollable {
   overflow-y: auto;
@@ -227,9 +224,6 @@
   font-weight: bold;
   text-decoration: none;
   color: #EE3F43; }
-  @media (min-width: 1024px) {
-    .category-list__heading {
-      font-size: 36px; } }
 
 .category-list__item--active .category-list__heading:hover {
   background: #f3bf80; }
@@ -262,18 +256,17 @@
     display: block;
     font-size: 18px;
     color: #EE3F43;
-    text-decoration: none; }
-    @media (min-width: 1024px) {
-      .posts-list__item a {
-        padding: 15px 10px 15px 100px;
-        font-size: 22px; } }
+    text-decoration: none;
+    /*
+        @include desktop {
+            padding: 15px 10px 15px 100px;
+            font-size: 22px;
+        }
+        */ }
   .posts-list__item time {
     font-size: 12px;
     color: black;
     display: block; }
-    @media (min-width: 1024px) {
-      .posts-list__item time {
-        font-size: 14px; } }
   .posts-list__item:hover, .posts-list__item.posts-list__item--active {
     background-color: #f7d7b0;
     background-image: url("../img/needle.svg");
