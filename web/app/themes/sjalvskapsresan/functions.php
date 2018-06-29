@@ -32,3 +32,10 @@ require 'includes/actions.php';
 require 'includes/menus.php';
 
 require 'includes/helpers.php';
+
+if ( function_exists('acf_add_options_page') ) {
+    acf_add_options_page( array(
+        'page_title' => 'Reseplan',
+        'icon_url' => 'dashicons-location-alt'
+    ) );
+}
