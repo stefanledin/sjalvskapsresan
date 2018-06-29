@@ -30,9 +30,14 @@
   justify-content: center;
   font-size: 12px; }
   .timeline__item.timeline__item--header {
-    padding: 0 20px;
+    padding: 0;
     background: #DEE9EB;
     color: #EE3F43; }
+    .timeline__item.timeline__item--header span {
+      width: 140px; }
+      @media (min-width: 900px) {
+        .timeline__item.timeline__item--header span {
+          width: 170px; } }
   .timeline__item.timeline__item--day {
     background: #759298; }
   @media (min-width: 900px) {
@@ -62,7 +67,7 @@
       font-size: 64px; } }
 
 .main {
-  margin: 30px 50px 100px 50px;
+  margin: 30px auto 100px auto;
   max-width: 780px;
   width: 90%;
   z-index: 1; }
@@ -72,8 +77,13 @@
       margin: 30px 30px 100px 30px; } }
   @media (min-width: 1024px) {
     .main {
-      margin: 30px 0 100px 120px; } }
+      margin: 30px 50px 100px 50px; } }
 
+/**
+ *
+ * Blogginlägg
+ *
+ */
 .post-wrapper {
   position: relative; }
 
@@ -121,6 +131,45 @@
   color: #93B7BF; }
   .post__published span {
     display: block; }
+
+/**
+ *
+ * Placeholder
+ *
+ */
+.post--placeholder {
+  padding-bottom: 0;
+  height: 100%; }
+  .post--placeholder span {
+    display: block;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eaeaea 8%, #dcdcdc 38%, #eaeaea 54%);
+    background-size: 1000px 640px;
+    position: relative; }
+    .posts-pile--run-animation .post--placeholder span {
+      animation-name: placeHolderShimmer; }
+  .post--placeholder .post__title span {
+    width: 90%;
+    height: 36px; }
+  .post--placeholder .post__title small span {
+    width: 100px;
+    height: 24px; }
+  .post--placeholder .post__published span {
+    width: 75px;
+    height: 14px; }
+  .post--placeholder p span {
+    width: 100%;
+    height: 30px; }
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0; }
+  100% {
+    background-position: 468px 0; } }
 
 .posts-pile {
   position: absolute;

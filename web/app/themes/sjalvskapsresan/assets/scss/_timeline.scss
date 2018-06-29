@@ -19,9 +19,15 @@
     justify-content: center;
     font-size: 12px;
     &.timeline__item--header {
-        padding: 0 20px;
+        padding: 0;
         background: $lightblue;
         color: $red;
+        span {
+            width: 140px;
+            @include tablet {
+                width: 170px;
+            }
+        }
     }
     &.timeline__item--day {
         background: $darkblue;
