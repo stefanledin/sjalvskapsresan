@@ -1,5 +1,5 @@
 .site-title {
-    margin: 0 0 15px 0;
+    margin: 0 0 30px 0;
     font-size: 32px;
     font-weight: normal;
     color: white;
@@ -13,7 +13,8 @@
 }
 
 .main {
-    margin: 30px auto 100px auto;
+    margin: 30px 50px 100px 50px;
+    max-width: 780px;
     width: 90%;
     z-index: 1;
     @include tablet {
@@ -47,6 +48,12 @@
         max-width: 580px;
         width: 90%;
     }
+    img {
+        display: block;
+    }
+    p {
+        line-height: 1.4;
+    }
 }
 .post__title {
     margin: 20px 0 0 0;
@@ -57,13 +64,21 @@
         font-size: 48px;
     }
     small {
-        margin-bottom: 7px;
+        margin-bottom: 8px;
         font-size: 18px;
         display: block;
         color: $brown;
         @include tablet {
             font-size: 24px;
         }
+    }
+}
+.post__published {
+    margin-top: 8px;
+    font-size: 14px;
+    color: $blue;
+    span {
+        display: block;
     }
 }
 

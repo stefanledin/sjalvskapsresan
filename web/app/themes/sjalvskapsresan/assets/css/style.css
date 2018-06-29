@@ -49,7 +49,7 @@
       font-size: 18px; } }
 
 .site-title {
-  margin: 0 0 15px 0;
+  margin: 0 0 30px 0;
   font-size: 32px;
   font-weight: normal;
   color: white; }
@@ -62,7 +62,8 @@
       font-size: 64px; } }
 
 .main {
-  margin: 30px auto 100px auto;
+  margin: 30px 50px 100px 50px;
+  max-width: 780px;
   width: 90%;
   z-index: 1; }
   @media (min-width: 900px) {
@@ -92,6 +93,10 @@
     margin-right: auto;
     max-width: 580px;
     width: 90%; }
+  .post img {
+    display: block; }
+  .post p {
+    line-height: 1.4; }
 
 .post__title {
   margin: 20px 0 0 0;
@@ -102,13 +107,20 @@
     .post__title {
       font-size: 48px; } }
   .post__title small {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     font-size: 18px;
     display: block;
     color: #F2B872; }
     @media (min-width: 900px) {
       .post__title small {
         font-size: 24px; } }
+
+.post__published {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #93B7BF; }
+  .post__published span {
+    display: block; }
 
 .posts-pile {
   position: absolute;
