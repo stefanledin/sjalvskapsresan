@@ -39,7 +39,8 @@
     "johnpbloch/wordpress": "4.9.6",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "timber/timber": "^1.7"
+    "timber/timber": "^1.7",
+    "nesbot/carbon": "^1.31"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"

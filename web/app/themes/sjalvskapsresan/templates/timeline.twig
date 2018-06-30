@@ -1,7 +1,6 @@
 <section class="timeline">
     <header class="timeline__item timeline__item--header">
-        <span>Självskapsresan<br>T-minus <time>19/17:20:20</time></span>
-        <span>Självskapsresan<br>T-minus <time>{{ trip_timer }}</time></span>
+        <span>Självskapsresan<br><span class="js-timer">{{ countdown }}</span></span>
     </header>
     {% for day in timeline %}
         <div class="timeline__item timeline__item--day">
