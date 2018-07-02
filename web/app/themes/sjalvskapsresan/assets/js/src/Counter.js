@@ -20,6 +20,7 @@ export default class Counter {
             diff = diff._data;
         }
         let html = this.diffAsHTML(diff);
+        html = prefix + html;
         this.el.innerHTML = html;
     }
 
