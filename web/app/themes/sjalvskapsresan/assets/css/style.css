@@ -16,11 +16,14 @@
   text-align: center;
   color: white;
   z-index: 5;
-  overflow-x: scroll;
   position: relative;
   top: 0;
   left: 0;
   right: 0; }
+
+.timeline__items-wrapper {
+  display: flex;
+  overflow-y: scroll; }
 
 .timeline__item {
   padding: 0 20px;
@@ -40,6 +43,8 @@
           width: 170px; } }
   .timeline__item.timeline__item--day {
     background: #759298; }
+  .timeline__item.timeline__item--passed {
+    opacity: .5; }
   @media (min-width: 900px) {
     .timeline__item {
       padding: 0 40px;

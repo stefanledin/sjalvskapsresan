@@ -2,44 +2,48 @@
     <header class="timeline__item timeline__item--header">
         <span>Självskapsresan<br><span class="js-timer">{{ counter }}</span></span>
     </header>
-    {% for day in timeline %}
-        <div class="timeline__item timeline__item--day">
-            <span class="timeline__item__heading">{{ function('ucfirst', day.date|date('l')) }}</span>
-            <span>{{ day.date|date('j M') }}</span>
-        </div>
-        {% for event in day.schedule %}
-            <div class="timeline__item">
-                <span class="timeline__item__heading">{{ event.city }}</span>
-                <span>{{ event.arrival_departure }}</span>
+    <div class="timeline__items-wrapper">
+        {% for day in timeline %}
+            <div class="{{'timeline__item timeline__item--day'|apply_filters('timeline_item_day_classes', day)}}">
+                <span class="timeline__item__heading">{{ function('ucfirst', day.date|date('l')) }}</span>
+                <span>{{ day.date|date('j M') }}</span>
             </div>
+            {% for event in day.schedule %}
+                <div class="{{'timeline__item'|apply_filters('timeline_item_classes', event.time)}}">
+                    <span class="timeline__item__heading">{{ event.city }}</span>
+                    <span>{{ event.arrival_departure }}: {{ event.time|date('H:i') }}</span>
+                </div>
+            {% endfor %}
         {% endfor %}
-    {% endfor %}
-    <div class="timeline__item timeline__item--day">
-        <span class="timeline__item__heading">Torsdag</span>
-        <span>5 juli</span>
-    </div>
-    <div class="timeline__item">
-        <span class="timeline__item__heading">Karlstad</span>
-        <span>Avresa: 06:11</span>
-    </div>
-    <div class="timeline__item">
-        <span class="timeline__item__heading">Göteborg</span>
-        <span>Ankomst: 08:45</span>
-    </div>
-    <div class="timeline__item">
-        <span class="timeline__item__heading">Göteborg</span>
-        <span>Avresa: 10:00</span>
-    </div>
-    <div class="timeline__item">
-        <span class="timeline__item__heading">Köpenhamn</span>
-        <span>Ankomst: 13:15</span>
-    </div>
-    <div class="timeline__item timeline__item--day">
-        <span class="timeline__item__heading">Fredag</span>
-        <span>6 juli</span>
-    </div>
-    <div class="timeline__item">
-        <span class="timeline__item__heading">Köpenhamn</span>
-        <span>Avresa: 07:35</span>
+        <!--
+        <div class="timeline__item timeline__item--day">
+            <span class="timeline__item__heading">Torsdag</span>
+            <span>5 juli</span>
+        </div>
+        <div class="timeline__item">
+            <span class="timeline__item__heading">Karlstad</span>
+            <span>Avresa: 06:11</span>
+        </div>
+        <div class="timeline__item">
+            <span class="timeline__item__heading">Göteborg</span>
+            <span>Ankomst: 08:45</span>
+        </div>
+        <div class="timeline__item">
+            <span class="timeline__item__heading">Göteborg</span>
+            <span>Avresa: 10:00</span>
+        </div>
+        <div class="timeline__item">
+            <span class="timeline__item__heading">Köpenhamn</span>
+            <span>Ankomst: 13:15</span>
+        </div>
+        <div class="timeline__item timeline__item--day">
+            <span class="timeline__item__heading">Fredag</span>
+            <span>6 juli</span>
+        </div>
+        <div class="timeline__item">
+            <span class="timeline__item__heading">Köpenhamn</span>
+            <span>Avresa: 07:35</span>
+        </div>
+        -->
     </div>
 </section>

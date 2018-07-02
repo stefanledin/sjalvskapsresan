@@ -12,6 +12,12 @@ document.querySelector('button.slask').addEventListener('click', event => {
     }, 1000);
 });
 
+const passedEvents = document.querySelectorAll('.timeline__item--passed')
+if (passedEvents) {
+    let scrollValue = 0;
+    passedEvents.forEach(item => scrollValue += item.clientWidth);
+    //document.querySelector('.timeline__items-wrapper').scrollLeft = scrollValue;
+}
 
 document.addEventListener('DOMContentLoaded', (event) => {
     import(/* webpackChunkName: "SidebarNav" */ './SidebarNav').then(SidebarNav => {
