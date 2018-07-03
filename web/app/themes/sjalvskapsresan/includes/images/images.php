@@ -5,6 +5,14 @@
 add_theme_support('post-thumbnails');
 
 /**
+ * Tar bort <p> taggar som wrappar <img>
+ */
+function filter_ptags_on_images($content) {
+    return preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '\1', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images');
+
+/**
  * Remove width- and height attributes from <img> tags.
  */
 function remove_thumbnail_dimensions( $html ) {
