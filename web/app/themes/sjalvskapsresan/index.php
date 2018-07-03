@@ -18,7 +18,14 @@ if ( ! $context['trip_has_started'] ) {
 }
 $context['timeline'] = get_field('timeline', 'options');
 
-$context['posts'] = new Timber\PostQuery( array( 'posts_per_page' => -1 ) );
-$context['post'] = $context['posts'][0];
+$context['posts'] = new Timber\PostQuery( array( 
+    'posts_per_page' => -1,
+    'order' => 'ASC'
+) );
+if ( is_home() ) {
+    $context['post'] = end( $context['posts'] );
+} else {
+    $context['post'] = Timber::query_post();
+}
 
 Timber::render( 'index.twig', $context );

@@ -3,24 +3,40 @@
         {% if posts %}
             <ul class="category-list">
                 {% set currentCategory = null %}
-                {% for post in posts %}
-                    {% set currentCategory = post.categories[0] %}
-                    <li class="category-list__item">
-                        <a href="{{ post.categories[0].link }}" class="category-list__heading">{{ post.categories[0] }}</a>
-                        <div class="posts-list__wrapper">
-                            <ul class="posts-list">
-                                <li class="posts-list__item">
-                                    <a href="{{ post.link }}">
-                                        <time>{{ post.post_date|date('D j F k\\l. H:i') }}</time>
-                                        {{ post.title }}
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                {% for blogPost in posts %}
+
+                    {% if currentCategory != blogPost.categories[0] %}
+
+                        {% if loop.index0 > 0 %}
+                                    </ul>
+                                </div>
+                            </li>
+                        {% endif %}
+
+                        <li class="category-list__item">
+                            <a href="{{ blogPost.categories[0].link }}" class="category-list__heading">{{ blogPost.categories[0] }}</a>
+                            <div class="posts-list__wrapper">
+                                <ul class="posts-list">
+                    {% endif %}
+
+                                    <!--<li class="{{'posts-list__item'|apply_filters('post_list_item_classes', blogPost.id)}}">-->
+                                    <li class="posts-list__item {% if blogPost.id == post.id %} posts-list__item--active {% endif %}">
+                                        <a href="{{ blogPost.link }}">
+                                            <time>{{ blogPost.post_date|date('D j F k\\l. H:i') }}</time>
+                                            {{ blogPost.title }}
+                                        </a>
+                                    </li>
+
+
+                    {% set currentCategory = blogPost.categories[0] %}
                 {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+
             </ul>
         {% endif %}
+        <!--
         <ul class="category-list">
             <li class="category-list__item">
                 <a href="#" class="category-list__heading">🇸🇪 Karlstad</a>
@@ -111,6 +127,7 @@
                 </div>
             </li>
         </ul>
+        -->
     </div>
     
     <div class="sidebar__timeline"></div>

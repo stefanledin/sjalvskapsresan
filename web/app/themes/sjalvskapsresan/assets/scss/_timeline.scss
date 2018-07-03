@@ -9,6 +9,11 @@
     top: 0;
     left: 0;
     right: 0;
+    flex-direction: column;
+    align-content: center;
+    @media (min-width: 480px) {
+        flex-direction: row;
+    }
 }
 .timeline__items-wrapper {
     display: flex;
@@ -25,6 +30,12 @@
         padding: 0;
         background: $lightblue;
         color: $red;
+        align-items: center;
+        height: 40px;
+        @media (min-width: 480px) {
+            align-items: flex-start;
+            height: auto;
+        }
         span {
             width: 140px;
             @include tablet {

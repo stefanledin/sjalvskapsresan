@@ -24,11 +24,13 @@ export default class SidebarNav {
 
     bindEvents() {
         this.categoryHeadings.forEach(a => a.addEventListener('click', this.togglePostsLists.bind(this)));
+        /*
         this.postsLinks.forEach(a => a.addEventListener('click', event => {
             event.preventDefault();
             this.toggleSidebar(event);
             document.querySelector('button.plask').click();
         }));
+        */
         this.opensidebarButton.addEventListener('click', this.toggleSidebar.bind(this));
         this.overlay.addEventListener('click', this.toggleSidebar.bind(this));
     }

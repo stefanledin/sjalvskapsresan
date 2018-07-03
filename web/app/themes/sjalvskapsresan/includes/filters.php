@@ -1,4 +1,18 @@
 <?php
+
+add_filter( 'post_list_item_classes', function( $classes, $post_id ) {
+    global $post;
+    var_dump($post_id, $post->ID);
+    if ( $post_id == $post->ID ) {
+        $classes .= ' posts-list__item--active';
+    }
+    return $classes;
+}, 10, 2 );
+
+add_filter( 'embed_oembed_html', function( $html, $url, $attr, $post_id ) {
+    return '<div class="post__embed">' . $html . '</div>';
+}, 10, 4 );
+
 /**
  * Tar bort <div> runt bilder med caption samt ändrar markup för caption.
  */
