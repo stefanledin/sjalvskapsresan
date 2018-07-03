@@ -1,5 +1,12 @@
 <?php
 /**
+ * Tar bort <div> runt bilder med caption samt ändrar markup för caption.
+ */
+add_filter( 'img_caption_shortcode', function( $output, $attr, $content ) {
+    return $content . '<span class="post__caption">'.$attr['caption'].'</span>';
+}, 10, 3 );
+
+/**
  * Kollar om händelsen i tidslinjen har passerat eller ej.
  * Isf läggs klassen "timeline__item--passed" på.
  */

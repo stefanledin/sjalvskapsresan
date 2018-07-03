@@ -73,7 +73,7 @@
 
 .main {
   margin: 30px auto 100px auto;
-  max-width: 780px;
+  max-width: 960px;
   width: 90%;
   z-index: 1; }
   @media (min-width: 900px) {
@@ -109,9 +109,17 @@
     max-width: 580px;
     width: 90%; }
   .post img {
+    margin: 0 auto;
     display: block; }
   .post p {
-    line-height: 1.4; }
+    line-height: 1.5; }
+
+.post__caption {
+  margin: 4px 0 16px 0;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  color: #333; }
 
 .post__title {
   margin: 20px 0 0 0;

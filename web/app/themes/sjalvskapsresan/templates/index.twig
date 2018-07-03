@@ -22,6 +22,23 @@
                 <button class="slask">Reset</button>
                 <h1 class="site-title">Självskapsresan</h1>
                 <div class="post-wrapper">
+                    {% if post %}
+                        <article class="post">
+                            {% if post.thumbnail %}
+                                <img src="{{ post.thumbnail.src }}">
+                                {% if post.thumbnail.caption %}
+                                    <span class="post__caption">{{ post.thumbnail.caption }}</span>
+                                {% endif %}
+                            {% endif %}
+                            <h1 class="post__title">{{ post.title }}</h1>
+                            <div class="post__published">
+                                <time>{{ post.post_date|date('H:i. D j F') }}</time>
+                                <!--<time>17:35. Fre 6 juli</time>-->
+                            </div>
+                            {{post.content}}
+                        </article>
+                    {% endif %}
+                    <!--
                     <article class="post">
                         <img src="http://via.placeholder.com/780x522">
                         <h1 class="post__title"><small>Dag 5. Berlin</small>Lorem ipsum dolor sit amet</h1>
@@ -33,6 +50,7 @@
                         <img src="http://via.placeholder.com/780x522">
                         <p>Cras varius id arcu ac porttitor. Maecenas ultrices, ligula a dapibus dictum, lectus dui fringilla eros, quis euismod risus eros ut urna. Morbi eu lacus nisi. Pellentesque augue nibh, posuere eget eros sed, pulvinar placerat erat. Cras nulla enim, luctus sit amet est varius, dignissim porta elit. Ut vitae lacinia enim. Sed fermentum, metus finibus volutpat elementum, neque enim laoreet turpis, porta vestibulum lacus lacus non diam. Nunc vel metus in nibh efficitur pharetra ut vitae lorem. Suspendisse auctor lorem dolor, sit amet accumsan nisi elementum eu.</p>
                     </article>
+                    -->
                     <div class="posts-pile posts-pile--animateable" style="transform: rotate(2deg)">
                         <article class="post post--placeholder">
                             <h1 class="post__title"><small><span></span></small><span></span></h1>

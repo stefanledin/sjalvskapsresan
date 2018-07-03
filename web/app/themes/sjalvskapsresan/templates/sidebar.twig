@@ -1,5 +1,26 @@
 <aside class="sidebar">
     <div class="sidebar__scrollable">
+        {% if posts %}
+            <ul class="category-list">
+                {% set currentCategory = null %}
+                {% for post in posts %}
+                    {% set currentCategory = post.categories[0] %}
+                    <li class="category-list__item">
+                        <a href="{{ post.categories[0].link }}" class="category-list__heading">{{ post.categories[0] }}</a>
+                        <div class="posts-list__wrapper">
+                            <ul class="posts-list">
+                                <li class="posts-list__item">
+                                    <a href="{{ post.link }}">
+                                        <time>{{ post.post_date|date('D j F k\\l. H:i') }}</time>
+                                        {{ post.title }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         <ul class="category-list">
             <li class="category-list__item">
                 <a href="#" class="category-list__heading">🇸🇪 Karlstad</a>
