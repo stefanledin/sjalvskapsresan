@@ -1,4 +1,7 @@
 <?php
+add_filter( 'wp_calculate_image_sizes', function( $sizes, $size, $image_src, $image_meta, $attachment_id ) {
+    return '(min-width: 900px) 960px, 100vw';
+}, 10, 5 );
 
 add_filter( 'post_list_item_classes', function( $classes, $post_id ) {
     global $post;
@@ -10,7 +13,7 @@ add_filter( 'post_list_item_classes', function( $classes, $post_id ) {
 }, 10, 2 );
 
 add_filter( 'embed_oembed_html', function( $html, $url, $attr, $post_id ) {
-    return '<div class="post__embed">' . $html . '</div>';
+    return '<div class="post__embed-wrapper"><div class="post__embed">' . $html . '</div></div>';
 }, 10, 4 );
 
 /**

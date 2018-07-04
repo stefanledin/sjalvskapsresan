@@ -18,17 +18,19 @@
             {% include 'sidebar.twig' %}
 
             <section class="main">
+                <!--
                 <button class="plask">Kör</button>
                 <button class="slask">Reset</button>
                 <br>
                 <br>
+                -->
                 <h1 class="site-title">Självskapsresan</h1>
                 <div class="post-wrapper">
                     {% if post %}
                         <article class="post">
                             {% if post.thumbnail %}
-                                <img src="{{ theme.link }}/assets/img/loader.svg" width="{{ post.thumbnail.width }}" height="{{ post.thumbnail.height }}">
-                                <!--<img src="{{ post.thumbnail.src }}">-->
+                                <!--<img src="{{ theme.link }}/assets/img/loader.svg" width="{{ post.thumbnail.sizes.large.width }}" height="{{ post.thumbnail.sizes.large.height }}">-->
+                                <img src="{{ post.thumbnail.src('placeholder') }}" data-srcset="{{ function('wp_get_attachment_image_srcset', post.thumbnail.id, 'large') }}" sizes="{{ function('wp_calculate_image_sizes', 'large', post.thumbnail.src('large'), null, post.thumbnail.id) }}" width="{{ post.thumbnail.sizes.large.width }}" height="{{ post.thumbnail.sizes.large.height }}">
                                 {% if post.thumbnail.caption %}
                                     <span class="post__caption">{{ post.thumbnail.caption }}</span>
                                 {% endif %}

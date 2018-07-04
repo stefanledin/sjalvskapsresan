@@ -1,10 +1,13 @@
-const WebFont = require('webfontloader');
-WebFont.load({
+import lazysizes from 'lazysizes';
+
+import { load } from 'webfontloader';
+load({
     google: {
         families: ['Pacifico']
     }
 });
 
+/*
 document.querySelector('button.plask').addEventListener('click', event => {
     event.preventDefault();
     document.querySelector('div.posts-pile--animateable').classList.add('posts-pile--run-animation');
@@ -17,6 +20,7 @@ document.querySelector('button.slask').addEventListener('click', event => {
         pile.classList.remove('posts-pile--run-animation', 'posts-pile--reset-animation');
     }, 1000);
 });
+*/
 
 const passedEvents = document.querySelectorAll('.timeline__item--passed')
 if (passedEvents) {

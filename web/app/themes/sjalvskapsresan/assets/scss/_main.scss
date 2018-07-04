@@ -93,7 +93,7 @@
     }
 }
 .post__published {
-    margin-top: 8px;
+    margin-top: 16px;
     font-size: 14px;
     color: $blue;
     span {
@@ -113,6 +113,17 @@
         width: 100%;
         height: 100%;
     }
+}
+
+.blur-up {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms;
+}
+
+.blur-up.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
 }
 
 /**

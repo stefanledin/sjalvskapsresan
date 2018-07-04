@@ -68,7 +68,9 @@
   @media (min-width: 900px) {
     .timeline__item {
       padding: 0 40px;
-      font-size: 14px; } }
+      font-size: 14px; }
+      .timeline__item.timeline__item--day {
+        padding: 0 20px; } }
 
 .timeline__item__heading {
   margin-bottom: 2px;
@@ -165,7 +167,7 @@
         font-size: 24px; } }
 
 .post__published {
-  margin-top: 8px;
+  margin-top: 16px;
   font-size: 14px;
   color: #93B7BF; }
   .post__published span {
@@ -184,6 +186,15 @@
     left: 0;
     width: 100%;
     height: 100%; }
+
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms; }
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0); }
 
 /**
  *

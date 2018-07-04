@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "87049be0b7bac5acf57108221a0747fe",
+    "hash": "b96b10bfacae0d9f5894cd10535677de",
+    "content-hash": "ef0254e30b9de8d246a0694c6f800b13",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -55,7 +56,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2014-04-16T09:44:40+00:00"
+            "time": "2014-04-16 09:44:40"
         },
         {
             "name": "asm89/twig-cache-extension",
@@ -109,7 +110,7 @@
                 "extension",
                 "twig"
             ],
-            "time": "2017-01-10T22:04:15+00:00"
+            "time": "2017-01-10 22:04:15"
         },
         {
             "name": "composer/installers",
@@ -229,7 +230,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-12-29T09:13:20+00:00"
+            "time": "2017-12-29 09:13:20"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -268,7 +269,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-05-17T20:03:03+00:00"
+            "time": "2018-05-17 20:03:03"
         },
         {
             "name": "johnpbloch/wordpress-core",
@@ -308,7 +309,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-05-17T20:02:55+00:00"
+            "time": "2018-05-17 20:02:55"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -357,7 +358,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-01-29T14:49:29+00:00"
+            "time": "2018-01-29 14:49:29"
         },
         {
             "name": "nesbot/carbon",
@@ -412,7 +413,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-06-25T13:15:16+00:00"
+            "time": "2018-06-25 13:15:16"
         },
         {
             "name": "oscarotero/env",
@@ -454,7 +455,7 @@
             "keywords": [
                 "env"
             ],
-            "time": "2017-07-17T20:41:59+00:00"
+            "time": "2017-07-17 20:41:59"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -511,7 +512,7 @@
             "keywords": [
                 "wordpress wp bcrypt password"
             ],
-            "time": "2016-03-01T16:27:06+00:00"
+            "time": "2016-03-01 16:27:06"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -570,7 +571,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-04-26 10:06:28"
         },
         {
             "name": "symfony/translation",
@@ -639,7 +640,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-06-22T08:59:39+00:00"
+            "time": "2018-06-22 08:59:39"
         },
         {
             "name": "timber/timber",
@@ -700,7 +701,7 @@
                 "timber",
                 "twig"
             ],
-            "time": "2018-05-21T15:00:50+00:00"
+            "time": "2018-05-21 15:00:50"
         },
         {
             "name": "twig/twig",
@@ -766,7 +767,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-04-02T09:24:19+00:00"
+            "time": "2018-04-02 09:24:19"
         },
         {
             "name": "upstatement/routes",
@@ -817,7 +818,7 @@
                 "routes",
                 "routing"
             ],
-            "time": "2016-07-06T12:53:24+00:00"
+            "time": "2016-07-06 12:53:24"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -867,7 +868,27 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01T10:05:43+00:00"
+            "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "wpackagist-plugin/regenerate-thumbnails",
+            "version": "3.0.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/regenerate-thumbnails/",
+                "reference": "tags/3.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.3.0.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
         }
     ],
     "packages-dev": [
@@ -920,7 +941,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-06-06T23:58:19+00:00"
+            "time": "2018-06-06 23:58:19"
         }
     ],
     "aliases": [],
