@@ -20,12 +20,15 @@
             <section class="main">
                 <button class="plask">Kör</button>
                 <button class="slask">Reset</button>
+                <br>
+                <br>
                 <h1 class="site-title">Självskapsresan</h1>
                 <div class="post-wrapper">
                     {% if post %}
                         <article class="post">
                             {% if post.thumbnail %}
-                                <img src="{{ post.thumbnail.src }}">
+                                <img src="{{ theme.link }}/assets/img/loader.svg" width="{{ post.thumbnail.width }}" height="{{ post.thumbnail.height }}">
+                                <!--<img src="{{ post.thumbnail.src }}">-->
                                 {% if post.thumbnail.caption %}
                                     <span class="post__caption">{{ post.thumbnail.caption }}</span>
                                 {% endif %}

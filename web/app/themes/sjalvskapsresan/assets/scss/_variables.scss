@@ -13,6 +13,19 @@ $darkblue: rgb(117, 146, 152);
 
 /**
  *
+ * FOUT
+ *
+ */
+@mixin pacifico {
+    .wf-pacifico-n4-active & {
+        font-family: 'Pacifico';
+        @content;
+    }
+}
+
+
+/**
+ *
  * Media queries
  *
  */

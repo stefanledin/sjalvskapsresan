@@ -1,3 +1,9 @@
+const WebFont = require('webfontloader');
+WebFont.load({
+    google: {
+        families: ['Pacifico']
+    }
+});
 
 document.querySelector('button.plask').addEventListener('click', event => {
     event.preventDefault();

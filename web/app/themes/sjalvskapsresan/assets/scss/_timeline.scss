@@ -34,10 +34,14 @@
         height: 40px;
         @media (min-width: 480px) {
             align-items: flex-start;
-            height: auto;
+            height: 75px;
         }
         span {
             width: 140px;
+            @include pacifico {
+                font-size: 16px;
+                line-height: 1.4;
+            }
             @include tablet {
                 width: 170px;
             }

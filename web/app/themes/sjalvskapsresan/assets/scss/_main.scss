@@ -3,6 +3,8 @@
     font-size: 32px;
     font-weight: normal;
     color: white;
+    line-height: 1.1;
+    @include pacifico;
     @include tablet {
         font-size: 48px;
     }
@@ -74,6 +76,9 @@
     font-size: 32px;
     color: $red;
     line-height: 1;
+    @include pacifico {
+        line-height: 1.2;
+    }
     @include tablet {
         font-size: 48px;
     }
